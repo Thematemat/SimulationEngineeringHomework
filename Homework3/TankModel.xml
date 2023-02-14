@@ -1,0 +1,530 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="modelkopa" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <property name="DDF Director" class="ptolemy.domains.ddf.kernel.DDFDirector">
+        <property name="iterations" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{65.0, 25.0}">
+        </property>
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-8, -8, 1936, 1056}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1708, 939]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{844.0, 459.5}">
+    </property>
+    <entity name="x1" class="ptolemy.actor.lib.SetVariable">
+        <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="0">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{990.0, 95.0}">
+        </property>
+    </entity>
+    <entity name="r1" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{75.0, 245.0}">
+        </property>
+    </entity>
+    <entity name="Comparator" class="ptolemy.actor.lib.logic.Comparator">
+        <property name="comparison" class="ptolemy.kernel.util.StringAttribute" value="&lt;">
+            <property name="style" class="ptolemy.actor.gui.style.ChoiceStyle">
+                <property name="gt" class="ptolemy.kernel.util.StringAttribute" value="&gt;">
+                </property>
+                <property name="ge" class="ptolemy.kernel.util.StringAttribute" value="&gt;=">
+                </property>
+                <property name="lt" class="ptolemy.kernel.util.StringAttribute" value="&lt;">
+                </property>
+                <property name="le" class="ptolemy.kernel.util.StringAttribute" value="&lt;=">
+                </property>
+                <property name="eq" class="ptolemy.kernel.util.StringAttribute" value="==">
+                </property>
+            </property>
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.AttributeValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="comparison">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{190.0, 235.0}">
+        </property>
+    </entity>
+    <entity name="r2" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{75.0, 300.0}">
+        </property>
+    </entity>
+    <entity name="x2" class="ptolemy.actor.lib.SetVariable">
+        <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="1">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{990.0, 330.0}">
+        </property>
+    </entity>
+    <entity name="Comparator2" class="ptolemy.actor.lib.logic.Comparator">
+        <property name="comparison" class="ptolemy.kernel.util.StringAttribute" value="&lt;">
+            <property name="style" class="ptolemy.actor.gui.style.ChoiceStyle">
+                <property name="gt" class="ptolemy.kernel.util.StringAttribute" value="&gt;">
+                </property>
+                <property name="ge" class="ptolemy.kernel.util.StringAttribute" value="&gt;=">
+                </property>
+                <property name="lt" class="ptolemy.kernel.util.StringAttribute" value="&lt;">
+                </property>
+                <property name="le" class="ptolemy.kernel.util.StringAttribute" value="&lt;=">
+                </property>
+                <property name="eq" class="ptolemy.kernel.util.StringAttribute" value="==">
+                </property>
+            </property>
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.AttributeValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="comparison">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{185.0, 290.0}">
+        </property>
+    </entity>
+    <entity name="ConfigurationSelect" class="ptolemy.actor.lib.ConfigurationSelect">
+        <property name="selector" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{310.0, 245.0}">
+        </property>
+        <port name="trueInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="tokenConsumptionRate" class="ptolemy.data.expr.Parameter" value="1">
+            </property>
+        </port>
+        <port name="falseInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="tokenConsumptionRate" class="ptolemy.data.expr.Parameter" value="0">
+            </property>
+        </port>
+    </entity>
+    <entity name="ConfigurationSwitch" class="ptolemy.actor.lib.ConfigurationSwitch">
+        <property name="selector" class="ptolemy.actor.parameters.PortParameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{520.0, 190.0}">
+        </property>
+        <port name="trueOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="tokenProductionRate" class="ptolemy.data.expr.Parameter" value="1">
+            </property>
+        </port>
+        <port name="falseOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="tokenProductionRate" class="ptolemy.data.expr.Parameter" value="0">
+            </property>
+        </port>
+    </entity>
+    <entity name="ConfigurationSwitch2" class="ptolemy.actor.lib.ConfigurationSwitch">
+        <property name="selector" class="ptolemy.actor.parameters.PortParameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{515.0, 440.0}">
+        </property>
+        <port name="trueOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="tokenProductionRate" class="ptolemy.data.expr.Parameter" value="1">
+            </property>
+        </port>
+        <port name="falseOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="tokenProductionRate" class="ptolemy.data.expr.Parameter" value="0">
+            </property>
+        </port>
+    </entity>
+    <entity name="AddSubtract" class="ptolemy.actor.lib.AddSubtract">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{710.0, 330.0}">
+        </property>
+    </entity>
+    <entity name="Const" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0.5">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{590.0, 365.0}">
+        </property>
+    </entity>
+    <entity name="Const2" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0.75">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{585.0, 320.0}">
+        </property>
+    </entity>
+    <entity name="AddSubtract2" class="ptolemy.actor.lib.AddSubtract">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{705.0, 460.0}">
+        </property>
+    </entity>
+    <entity name="Const3" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0.5">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{590.0, 525.0}">
+        </property>
+    </entity>
+    <entity name="AddSubtract3" class="ptolemy.actor.lib.AddSubtract">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{710.0, 95.0}">
+        </property>
+    </entity>
+    <entity name="AddSubtract4" class="ptolemy.actor.lib.AddSubtract">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{705.0, 210.0}">
+        </property>
+    </entity>
+    <entity name="Const4" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0.5">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{590.0, 270.0}">
+        </property>
+    </entity>
+    <entity name="Const5" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0.5">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{590.0, 135.0}">
+        </property>
+    </entity>
+    <entity name="Const6" class="ptolemy.actor.lib.Const">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="0.75">
+        </property>
+        <doc>Create a constant sequence.</doc>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{585.0, 85.0}">
+        </property>
+    </entity>
+    <entity name="SampleDelay" class="ptolemy.domains.sdf.lib.SampleDelay">
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{830.0, 95.0}">
+        </property>
+    </entity>
+    <entity name="SampleDelay2" class="ptolemy.domains.sdf.lib.SampleDelay">
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{830.0, 210.0}">
+        </property>
+    </entity>
+    <entity name="SampleDelay3" class="ptolemy.domains.sdf.lib.SampleDelay">
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{830.0, 330.0}">
+        </property>
+    </entity>
+    <entity name="SampleDelay4" class="ptolemy.domains.sdf.lib.SampleDelay">
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{830.0, 460.0}">
+        </property>
+    </entity>
+    <entity name="x1Display" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={822, 778, 239, 186}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[223, 126]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{175.0, 95.0}">
+        </property>
+    </entity>
+    <entity name="x2Display" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={456, 787, 239, 186}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[223, 126]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{175.0, 350.0}">
+        </property>
+    </entity>
+    <entity name="x1 plot " class="ptolemy.actor.lib.gui.SequencePlotter">
+        <display name="x1 plot&#10;"/>
+        <property name="legend" class="ptolemy.kernel.util.StringAttribute" value="x1">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1395, 207, 516, 360}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 300]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[175.0, 165.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>SequencePlotter</title>
+<xRange min="0.0" max="23.0"/>
+<yRange min="0.0" max="20.5"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="x2 plot" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <display name="x2 plot"/>
+        <property name="legend" class="ptolemy.kernel.util.StringAttribute" value="x2">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1251, 649, 516, 360}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 300]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{175.0, 410.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>SequencePlotter2</title>
+<xRange min="0.0" max="15.0"/>
+<yRange min="0.0" max="2.5"/>
+</plot>?>
+        </configure>
+    </entity>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;r1.output&quot;,x=75.0,y=245.0}, tail={id=&quot;Comparator.right&quot;,x=190.0,y=235.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;r2.output&quot;,x=75.0,y=300.0}, tail={id=&quot;Comparator2.right&quot;,x=185.0,y=290.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Comparator.output&quot;,x=190.0,y=235.0}, tail={id=&quot;ConfigurationSelect.trueInput&quot;,x=310.0,y=245.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Comparator2.output&quot;,x=185.0,y=290.0}, tail={id=&quot;ConfigurationSelect.falseInput&quot;,x=310.0,y=245.0}, points={260.0,290.0,260.0,255.0} } }">
+        </property>
+    </relation>
+    <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{120.0, 410.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch2.input&quot;,x=515.0,y=440.0}, tail={id=&quot;relation9.vertex1&quot;,x=120.0,y=410.0}, points={120.0,440.0} },{ head={id=&quot;x2Display.input&quot;,x=175.0,y=350.0}, tail={id=&quot;relation9.vertex1&quot;,x=120.0,y=410.0}, points={120.0,350.0} },{ head={id=&quot;Comparator2.left&quot;,x=185.0,y=290.0}, tail={id=&quot;relation9.vertex1&quot;,x=120.0,y=410.0}, points={120.0,280.0} },{ head={id=&quot;x2.output&quot;,x=990.0,y=330.0}, tail={id=&quot;relation9.vertex1&quot;,x=120.0,y=410.0}, points={1035.0,330.0,1035.0,545.0,450.0,545.0,450.0,440.0,120.0,440.0} },{ head={id=&quot;x2 plot.input&quot;,x=175.0,y=410.0}, tail={id=&quot;relation9.vertex1&quot;,x=120.0,y=410.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{120.0, 120.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch.input&quot;,x=520.0,y=190.0}, tail={id=&quot;relation4.vertex1&quot;,x=120.0,y=120.0}, points={450.0,190.0,450.0,55.0,260.0,55.0,260.0,120.0} },{ head={id=&quot;Comparator.left&quot;,x=190.0,y=235.0}, tail={id=&quot;relation4.vertex1&quot;,x=120.0,y=120.0}, points={120.0,225.0} },{ head={id=&quot;x1.output&quot;,x=990.0,y=95.0}, tail={id=&quot;relation4.vertex1&quot;,x=120.0,y=120.0}, points={1035.0,95.0,1035.0,55.0,120.0,55.0} },{ head={id=&quot;x1Display.input&quot;,x=175.0,y=95.0}, tail={id=&quot;relation4.vertex1&quot;,x=120.0,y=120.0}, points={120.0,95.0} },{ head={id=&quot;x1 plot .input&quot;,x=175.0,y=165.0}, tail={id=&quot;relation4.vertex1&quot;,x=120.0,y=120.0}, points={120.0,165.0} } }">
+        </property>
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch2.trueOutput&quot;,x=515.0,y=440.0}, tail={id=&quot;AddSubtract.plus&quot;,x=710.0,y=330.0,index=2}, points={635.0,430.0,635.0,315.0} } }">
+        </property>
+    </relation>
+    <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract.minus&quot;,x=710.0,y=330.0}, tail={id=&quot;Const.output&quot;,x=590.0,y=365.0}, points={650.0,340.0,650.0,365.0} } }">
+        </property>
+    </relation>
+    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract.plus&quot;,x=710.0,y=330.0,index=2}, tail={id=&quot;Const2.output&quot;,x=585.0,y=320.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation12" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch2.falseOutput&quot;,x=515.0,y=440.0}, tail={id=&quot;AddSubtract2.plus&quot;,x=705.0,y=460.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation13" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract2.minus&quot;,x=705.0,y=460.0}, tail={id=&quot;Const3.output&quot;,x=590.0,y=525.0}, points={635.0,470.0,635.0,525.0} } }">
+        </property>
+    </relation>
+    <relation name="relation14" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch.trueOutput&quot;,x=520.0,y=190.0}, tail={id=&quot;AddSubtract3.plus&quot;,x=710.0,y=95.0,index=2}, points={635.0,180.0,635.0,80.0} } }">
+        </property>
+    </relation>
+    <relation name="relation15" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch.falseOutput&quot;,x=520.0,y=190.0}, tail={id=&quot;AddSubtract4.plus&quot;,x=705.0,y=210.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation16" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract4.minus&quot;,x=705.0,y=210.0}, tail={id=&quot;Const4.output&quot;,x=590.0,y=270.0}, points={635.0,220.0,635.0,270.0} } }">
+        </property>
+    </relation>
+    <relation name="relation17" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract3.minus&quot;,x=710.0,y=95.0}, tail={id=&quot;Const5.output&quot;,x=590.0,y=135.0}, points={650.0,105.0,650.0,135.0} } }">
+        </property>
+    </relation>
+    <relation name="relation18" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract3.plus&quot;,x=710.0,y=95.0,index=2}, tail={id=&quot;Const6.output&quot;,x=585.0,y=85.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation19" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract2.output&quot;,x=705.0,y=460.0}, tail={id=&quot;SampleDelay4.input&quot;,x=830.0,y=460.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation20" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract.output&quot;,x=710.0,y=330.0}, tail={id=&quot;SampleDelay3.input&quot;,x=830.0,y=330.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation21" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract4.output&quot;,x=705.0,y=210.0}, tail={id=&quot;SampleDelay2.input&quot;,x=830.0,y=210.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation22" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;AddSubtract3.output&quot;,x=710.0,y=95.0}, tail={id=&quot;SampleDelay.input&quot;,x=830.0,y=95.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation23" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="{930.0, 330.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;x2.input&quot;,x=990.0,y=330.0}, tail={id=&quot;relation23.vertex1&quot;,x=930.0,y=330.0}, points={} },{ head={id=&quot;SampleDelay3.output&quot;,x=830.0,y=330.0}, tail={id=&quot;relation23.vertex1&quot;,x=930.0,y=330.0}, points={} },{ head={id=&quot;SampleDelay4.output&quot;,x=830.0,y=460.0}, tail={id=&quot;relation23.vertex1&quot;,x=930.0,y=330.0}, points={910.0,460.0,910.0,330.0} } }">
+        </property>
+    </relation>
+    <relation name="relation24" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="{930.0, 95.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;x1.input&quot;,x=990.0,y=95.0}, tail={id=&quot;relation24.vertex1&quot;,x=930.0,y=95.0}, points={} },{ head={id=&quot;SampleDelay.output&quot;,x=830.0,y=95.0}, tail={id=&quot;relation24.vertex1&quot;,x=930.0,y=95.0}, points={} },{ head={id=&quot;SampleDelay2.output&quot;,x=830.0,y=210.0}, tail={id=&quot;relation24.vertex1&quot;,x=930.0,y=95.0}, points={910.0,210.0,910.0,95.0} } }">
+        </property>
+    </relation>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{465.0, 245.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;ConfigurationSwitch2.selector&quot;,x=515.0,y=440.0}, tail={id=&quot;relation8.vertex1&quot;,x=465.0,y=245.0}, points={515.0,495.0,465.0,495.0} },{ head={id=&quot;ConfigurationSelect.output&quot;,x=310.0,y=245.0}, tail={id=&quot;relation8.vertex1&quot;,x=465.0,y=245.0}, points={} },{ head={id=&quot;ConfigurationSwitch.selector&quot;,x=520.0,y=190.0}, tail={id=&quot;relation8.vertex1&quot;,x=465.0,y=245.0}, points={520.0,245.0} } }">
+        </property>
+    </relation>
+    <link port="x1.input" relation="relation24"/>
+    <link port="x1.output" relation="relation4"/>
+    <link port="r1.output" relation="relation2"/>
+    <link port="Comparator.left" relation="relation4"/>
+    <link port="Comparator.right" relation="relation2"/>
+    <link port="Comparator.output" relation="relation5"/>
+    <link port="r2.output" relation="relation3"/>
+    <link port="x2.input" relation="relation23"/>
+    <link port="x2.output" relation="relation9"/>
+    <link port="Comparator2.left" relation="relation9"/>
+    <link port="Comparator2.right" relation="relation3"/>
+    <link port="Comparator2.output" relation="relation6"/>
+    <link port="ConfigurationSelect.trueInput" relation="relation5"/>
+    <link port="ConfigurationSelect.falseInput" relation="relation6"/>
+    <link port="ConfigurationSelect.output" relation="relation8"/>
+    <link port="ConfigurationSwitch.input" relation="relation4"/>
+    <link port="ConfigurationSwitch.selector" relation="relation8"/>
+    <link port="ConfigurationSwitch.trueOutput" relation="relation14"/>
+    <link port="ConfigurationSwitch.falseOutput" relation="relation15"/>
+    <link port="ConfigurationSwitch2.input" relation="relation9"/>
+    <link port="ConfigurationSwitch2.selector" relation="relation8"/>
+    <link port="ConfigurationSwitch2.trueOutput" relation="relation"/>
+    <link port="ConfigurationSwitch2.falseOutput" relation="relation12"/>
+    <link port="AddSubtract.plus" relation="relation"/>
+    <link port="AddSubtract.plus" relation="relation11"/>
+    <link port="AddSubtract.minus" relation="relation10"/>
+    <link port="AddSubtract.output" relation="relation20"/>
+    <link port="Const.output" relation="relation10"/>
+    <link port="Const2.output" relation="relation11"/>
+    <link port="AddSubtract2.plus" relation="relation12"/>
+    <link port="AddSubtract2.minus" relation="relation13"/>
+    <link port="AddSubtract2.output" relation="relation19"/>
+    <link port="Const3.output" relation="relation13"/>
+    <link port="AddSubtract3.plus" relation="relation14"/>
+    <link port="AddSubtract3.plus" relation="relation18"/>
+    <link port="AddSubtract3.minus" relation="relation17"/>
+    <link port="AddSubtract3.output" relation="relation22"/>
+    <link port="AddSubtract4.plus" relation="relation15"/>
+    <link port="AddSubtract4.minus" relation="relation16"/>
+    <link port="AddSubtract4.output" relation="relation21"/>
+    <link port="Const4.output" relation="relation16"/>
+    <link port="Const5.output" relation="relation17"/>
+    <link port="Const6.output" relation="relation18"/>
+    <link port="SampleDelay.input" relation="relation22"/>
+    <link port="SampleDelay.output" relation="relation24"/>
+    <link port="SampleDelay2.input" relation="relation21"/>
+    <link port="SampleDelay2.output" relation="relation24"/>
+    <link port="SampleDelay3.input" relation="relation20"/>
+    <link port="SampleDelay3.output" relation="relation23"/>
+    <link port="SampleDelay4.input" relation="relation19"/>
+    <link port="SampleDelay4.output" relation="relation23"/>
+    <link port="x1Display.input" relation="relation4"/>
+    <link port="x2Display.input" relation="relation9"/>
+    <link port="x1 plot .input" relation="relation4"/>
+    <link port="x2 plot.input" relation="relation9"/>
+</entity>
